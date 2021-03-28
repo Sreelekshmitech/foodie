@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {Text,StyleSheet, View,TextInput,Image} from 'react-native';
-import Icon from 'react-native-vector-icons/EvilIcons';
-import Icons from 'react-native-vector-icons/Entypo';
-import Icon1 from 'react-native-vector-icons/Entypo';
-import Icon2 from 'react-native-vector-icons/AntDesign';
+import {Text,StyleSheet, View,TextInput,Image,Button,TouchableOpacity} from 'react-native';
+
 import {DrawerActions} from '@react-navigation/native';
 
 export default class Homescreen extends Component {
@@ -12,58 +9,39 @@ export default class Homescreen extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.header}> 
-         <Icon name='navicon' size={26} color='white'onPress={() =>
-                          this.props.navigation.dispatch(
-                            DrawerActions.toggleDrawer(),
-                          )
-                        }/>
-            
-        <Icons name='location-pin' size={15} color='#37af0c'onPress={() =>
-                      this.props.navigation.navigate('Location')
-                    }  style={{paddingLeft:5}}/>
-         <Text onPress={() =>
-                      this.props.navigation.navigate('Location')
-                    }  style={styles.place}>Rajapalayam </Text>
-         <Icon1 style={styles.cart} name='shopping-cart' size={15} color='white'/>
-      </View>
-       <View style={styles.body}>
-        <Text style={styles.text}>Discover new  </Text>
-        <Text style={styles.text}>tasting experience</Text>
-       </View>
-       <View style={styles.searchfield}>
-         <Icon2 style={styles.searchfieldicon} name='search1' size={16} color='#37af0c' />
-          <TextInput style={styles.searchfieldtext} defaultValue='Search for restro,food.....'color='grey'/>
-        </View>
-       <View style={styles.searchfield}>
-       <Text style={styles.near}>Near You</Text>
-       </View>
-       <View style={styles.viewstyle}>
-         <View style={styles.imagebody}>
-          <Image source={require('../assets/img/porotta.png')}
-           style={{width: '100%', height: 170}}/>
-           <View style={styles.rate}>
-             <Text style={styles.text1}>0.0</Text>
-           </View>
-           <View style={styles.resname}>
-             <Text style={styles.text2}>Sahana</Text>
-             <Text style={styles.text2}>Veg & Nonveg</Text>
-           </View>
-         </View>
-       </View>
-       <View style={styles.viewstylecontent}>
-       <Text style={styles.baseText}>mins</Text>
-       <Text style={styles.baseText1}>11:30:AM</Text>  
-       <Text style={styles.baseText2}>10:00:PM</Text>      
-       <Text style={styles.baseText3}>Closed</Text>
-       </View>
+        
        <View style={styles.viewstylecontent1}>
-       <Text style={styles.bottom}>Avg delivery time</Text> 
-       <Text style={styles.bottom1}>Openning time </Text>    
-       <Text style={styles.bottom2}>Closing Time </Text>    
-       <Text style={styles.bottom3}>Status</Text>                         
+       <Text style={styles.bottom}>welcome to home page</Text> 
+         
+                             
        </View>
+       {/* <View >
+
+     <TouchableOpacity onPress={() =>this.props.navigation.navigate('Edit')}
+   style={styles.button1}
+    
+ >
+   <Text style={styles.buttontext}>Edit</Text>
+ 
+ </TouchableOpacity>
+
+   
+ </View>  */}
+
+ {/* <View >
+
+     <TouchableOpacity onPress={() =>this.props.navigation.navigate('Add')}
+   style={styles.button2}
+    
+ >
+   <Text style={styles.buttontext}>Add</Text>
+ 
+ </TouchableOpacity>
+
+   
+ </View>  */}
      </View>
+     
     )
   }
 }
@@ -225,5 +203,27 @@ const styles = StyleSheet.create({
     fontSize:10,
     paddingTop:5,
     paddingLeft:40,
-   }
+   },
+   buttontext:{
+    color:'#ffffff',
+    fontSize:20,
+   
+},
+   button1: {
+    alignItems: "center",
+    borderWidth:1,
+    borderColor: "white",
+    backgroundColor: "limegreen",
+    padding:10,
+    marginTop:215,
+  },  
+
+  // button2: {
+  //   alignItems: "center",
+  //   backgroundColor: "limegreen",
+  //   padding:20,
+  //   marginTop:55,
+    
+  // },  
+
   });

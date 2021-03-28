@@ -2,8 +2,6 @@
  import React,{ Component }from 'react';
  import {NavBarCustom}from './src/NavBarCustom';
 import Homescreen from './src/homescreen';
-import Myorders from './src/myorders';
-import Wallet from './src/Wallet';
 import Login from './src/Login';
 import Support from './src/Support';
 import IPL_Challenge from './src/IPL_challenge';
@@ -14,8 +12,13 @@ import Subscribe from './src/Subscribe';
 import Signin from './src/Signin';
 import Forgot from './src/Forgot';
 import Splashscreen from './src/Splashscreen';
+import Edit from './src/Edit';
+import Dup from './src/Dup';
+// import Add from './src/Add';
+
 import { NavigationContainer } from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
+
 
 const Drawer = createDrawerNavigator();
 export default class app extends Component {
@@ -24,7 +27,7 @@ export default class app extends Component {
       <NavigationContainer>
         <Drawer.Navigator drawerContent={props => <NavBarCustom {...props} />}
          drawerStyle={{
-          width:320,
+            width:320,
         }}>
           
           <Drawer.Screen name="Home" component={Homescreen}/> 
@@ -41,8 +44,13 @@ export default class app extends Component {
           <Drawer.Screen name="Forgot" component={Forgot}/>
           <Drawer.Screen name="Login" component={Login}/>
           <Drawer.Screen name="Splashscreen" component={Splashscreen}/>
+          <Drawer.Screen name="Edit" component={Edit}/>
+          <Drawer.Screen name="Dup" component={Dup}/>
+          {/* <Drawer.Screen name="Add" component={Add}/> */}
+          
           </Drawer.Navigator>
-      </NavigationContainer>
+       </NavigationContainer>
+      
     );
   }
 }

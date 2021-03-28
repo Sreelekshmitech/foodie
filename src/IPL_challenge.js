@@ -48,7 +48,7 @@ export default class IPL_challenge extends Component{
             </View>
             
 
-
+ 
             <View >
 
             <TouchableOpacity onPress={() =>this.props.navigation.navigate('Subscribe')}
@@ -60,7 +60,7 @@ export default class IPL_challenge extends Component{
         </TouchableOpacity>
 
           
-        </View> 
+        </View>
 
 
 

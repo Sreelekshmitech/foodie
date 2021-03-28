@@ -1,5 +1,5 @@
 {
-  "name": "Foodie",
+  "name": "foodie",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -17,6 +17,7 @@
     "@react-navigation/stack": "^5.9.3",
     "react": "16.13.1",
     "react-native": "0.63.3",
+    "react-native-firebase": "^5.6.0",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-paper": "^4.2.0",
     "react-native-reanimated": "^1.13.1",
@@ -36,5 +37,17 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "use npm install",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teslinrose/foodie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teslinrose/foodie/issues"
+  },
+  "homepage": "https://github.com/Teslinrose/foodie#readme"
 }
